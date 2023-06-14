@@ -5,11 +5,16 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         String word = sc.nextLine();
-        boolean palindrom = isPalindrom(word);
+        Palindrom object = new Palindrom();
+        boolean palindrom = object.isPalindrom(word);
         System.out.println(palindrom);
-    }
 
-    public static boolean isPalindrom(String word) {
+    }
+}
+
+
+class Palindrom{
+    public boolean isPalindrom(String word) {
 
         int i = 0;
 
