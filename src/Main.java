@@ -15,7 +15,8 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        arr = deleteSameElements(arr);
+        deleteSameElements object = new deleteSameElements();
+        arr = object.deleteSameElements(arr);
 
         System.out.println("Преобразованный массив:" + '\n');
         for (int i = 0; i < arr.length; i++) {
@@ -25,8 +26,13 @@ public class Main {
 
     }
 
+}
 
-    public static int[] deleteSameElements(int[] arr){
+
+
+class deleteSameElements{
+
+    public int[] deleteSameElements(int[] arr){
 
         int arrLength = arr.length;
 
@@ -48,6 +54,5 @@ public class Main {
 
         return resArr;
     }
-
 
 }
