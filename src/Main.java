@@ -10,15 +10,15 @@ public class Main {
         int size = sc.nextInt();
         int[] arr = new int[size];
 
-        System.out.println("Введите массив размером" + size + ":\n");
+        System.out.println("Введите массив размером" + size);
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
 
-        deleteSameElements object = new deleteSameElements();
+        EditingArray object = new EditingArray();
         arr = object.deleteSameElements(arr);
 
-        System.out.println("Преобразованный массив:" + '\n');
+        System.out.println("Преобразованный массив:");
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -30,29 +30,3 @@ public class Main {
 
 
 
-class deleteSameElements{
-
-    public int[] deleteSameElements(int[] arr){
-
-        int arrLength = arr.length;
-
-        for (int i = 0; i < arrLength; i++) {
-            for (int j = i + 1; j < arrLength; j++) {
-                if (arr[i] == arr[j]) {
-                    arr[j] = arr[arrLength - 1];
-                    arrLength--;
-                    j--;
-                }
-            }
-        }
-
-        int[] resArr = new int[arrLength];
-
-        for (int i = 0; i < arrLength; i++) {
-            resArr[i] = arr[i];
-        }
-
-        return resArr;
-    }
-
-}
